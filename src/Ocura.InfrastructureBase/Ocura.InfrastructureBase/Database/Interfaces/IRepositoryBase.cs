@@ -12,7 +12,7 @@ namespace Ocura.InfrastructureBase.Database.Interfaces
         void Update(TEntity obj);
         void Remove(TEntity obj);
         TEntity GetById(long id);
-        IEnumerable<TEntity> GetBy(Expression<Func<TEntity, bool>> exp);
+        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> exp);
         IEnumerable<TEntity> GetColsAll<TColumns>(Expression<Func<TEntity, TColumns>> columns);
         IEnumerable<TEntity> GetColsBy<TColumns>(Expression<Func<TEntity, bool>> exp, Expression<Func<TEntity, TColumns>> columns);
         IEnumerable<TEntity> GetTopColsBy<TColumns>(Expression<Func<TEntity, bool>> exp, Expression<Func<TEntity, TColumns>> columns, int topRowsNumber);

@@ -103,7 +103,7 @@ namespace Ocura.InfrastructureBase.Database.Repositories
         /// </summary>
         /// <param name="exp">The exp.</param>
         /// <returns></returns>
-        public IEnumerable<TEntity> GetBy(Expression<Func<TEntity, bool>> exp)
+        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> exp)
         {
             return DbContext.Set<TEntity>().Where(exp);
         }
